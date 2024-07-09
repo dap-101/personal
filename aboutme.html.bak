@@ -13,15 +13,18 @@
     <div id="tswcontainer">
       <div id="tswheader">
         <!-- start of header section: insert your logo, etc, here -->
-        <p> Placeholder content for your header section. Replace it with your
-          website's logo or name or page title or whatever. </p>
+        <img src="images/eminem.png" alt="eminem singing"
+
+          style="height: 250px;" width:250="" id="logo"><img src="images/miles%20morales.png"
+
+          alt="miles morales spiderman">
         <p>&nbsp;</p>
         <!-- end of header section: insert your logo, etc, above this line --> </div>
       <div id="tswcontent">
         <div id="tswcontproper">
           <!-- start of content column: insert your content here -->
-          <h1>About me</h1>
-          <p><a href="https://www.instagram.com/_dap101/">Let's try this</a></p>
+          <h1>About Me</h1>
+          <p>Instagram:<a href="https://www.instagram.com/_dap101/">_dap101</a></p>
           <p> If you want a navigation menu for your side column that looks like
             the one on thesitewizard.com, you can generate your own and
             customize it, with the <a href="https://www.thesitewizard.com/wizards/css-menu-buttons.shtml">Navigation
@@ -45,6 +48,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="aboutme.html">About Me </a></li>
               <li><a href="mytown.html">My Town</a></li>
+              <li><a href="sitemap.html"> Site Map</a></li>
             </ul>
           </div>
           <!-- end of side column: put your navigation menu, etc, above this line -->

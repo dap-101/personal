@@ -12,8 +12,9 @@
   <body>
     <div id="tswcontainer">
       <div id="tswheader"> <img src="images/eminem.png" alt="eminem singing" style="height: 306px; width: 314px;"
-          width:250="" id="logo"><img src="images/miles%20morales.png" alt="miles morales spiderman"
-          style="width: 544px; height: 306px;"><!-- start of header section: insert your logo, etc, here -->&nbsp;
+          width:250=""><img src="images/miles%20morales.png" alt="miles morales spiderman"
+          style="width: 544px; height: 306px;"><img src="images/la-la-land.png"
+          alt="la la land scene with seb and mia dancing at night" id="logo" style="width: 542px; height: 306px;"><!-- start of header section: insert your logo, etc, here -->&nbsp;
         <p>&nbsp;</p>
         <!-- end of header section: insert your logo, etc, above this line --> </div>
       <div id="tswcontent">
@@ -21,6 +22,10 @@
           <!-- start of content column: insert your content here -->
           <h1>About Me</h1>
           <p>Instagram:<a href="https://www.instagram.com/_dap101/">_dap101</a></p>
+          <iframe src="https://www.youtube.com/embed/CanCZktm0TQ" title="Eminem - Tobey feat. Big Sean &amp; BabyTron (Official Music Video)"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""
+            height="669" frameborder="0" width="1189"></iframe>
           <p> If you want a navigation menu for your side column that looks like
             the one on thesitewizard.com, you can generate your own and
             customize it, with the <a href="https://www.thesitewizard.com/wizards/css-menu-buttons.shtml">Navigation

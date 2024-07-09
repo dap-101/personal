@@ -34,5 +34,14 @@
 #logo {
   display: block;
   margin: auto;
+  float: right;
+}
+
+#picture {
+  float: right;
+}
+
+#tswheader {
+  float: right;
 }
 
