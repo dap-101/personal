@@ -35,6 +35,11 @@
   display: block;
   margin: auto;
   float: right;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  width: 100%;
+  height: 120px;
 }
 
 #picture {
@@ -42,6 +47,8 @@
 }
 
 #tswheader {
-  float: right;
+  /* float: right; */
+  position: relative;
+  height: 80px;
 }
 

@@ -2,6 +2,10 @@ body {
   font-family: "Times New Roman", "Times", "serif";
 }
 
+div#tswcontproper h1 {
+  margin-top: 0;
+}
+
 img {
   max-width: 100%;
   width: auto;
@@ -47,7 +51,7 @@ div#tswcontproper {
 }
 
 div#tswcontainer {
-  color: ;
+  /* color: ; */
   background-color: white;
 }
 
