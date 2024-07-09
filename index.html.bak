@@ -14,8 +14,9 @@
       <div id="tswheader">
         <!-- start of header section: insert your logo, etc, here -->
         <p> </p>
-        <p>&nbsp;<img src="file:///Z:/images/lighting.png" alt="Lighting setting on fire a forest on a montain"
-            style="width: 533px; height: 162px;" id="logo"></p>
+        <p>&nbsp;<img src="file:///Z:/images/sky.png" alt="SKy full of stars"
+
+            style="width: 375px; height: 139px;" id="logo"></p>
         <!-- end of header section: insert your logo, etc, above this line --> </div>
       <div id="tswcontent">
         <div id="tswcontproper">
@@ -46,6 +47,7 @@
               <li><a href="index.html">Home</a></li>
               <li><a href="aboutme.html">About Me </a></li>
               <li><a href="mytown.html">My Town</a></li>
+              <li><a href="sitemap.html"> Site Map</a></li>
             </ul>
           </div>
           <!-- end of side column: put your navigation menu, etc, above this line -->
