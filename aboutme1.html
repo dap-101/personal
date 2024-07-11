@@ -32,21 +32,33 @@
 <body>
   <div id="tswcontainer">
     <div id="tswheader"> <!-- start of header section: insert your logo, etc, here -->&nbsp;
-      <p>&nbsp;</p>
+      <p>&nbsp;<img src="images/welcome1.png" alt="welcome banner" 
+
+        id="logo"></p>
       <!-- end of header section: insert your logo, etc, above this line -->
     </div>
     <div id="tswcontent">
       <div id="tswcontproper">
         <!-- start of content column: insert your content here -->
+        <p>Website Settings:</p>
+          <label>Background color:</label>
+          <input id="color-field" value="white">
+          <br>
+          <label>Font Size:</label>
+          <input type="number" id="font-size-field">
+          <br>
+          <button id="click-button" onclick="buttonPress()"> Click Me </button>
+
+
         <h1>About Me</h1>
         <p>Instagram:<a href="https://www.instagram.com/_dap101/">_dap101</a></p>
         <div><img src="images/la-la-land.png" alt="La la land scene with Mia and Seb dancing"></div>
         <div><img src="images/miles%20morales.png" alt="Miles Morales"></div>
-        <iframe src="https://www.youtube.com/embed/CanCZktm0TQ"
+        <!--<iframe src="https://www.youtube.com/embed/CanCZktm0TQ"
           title="Eminem - Tobey feat. Big Sean &amp; BabyTron (Official Music Video)"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen="" height="334.5px" frameborder="0"
-          width="594.5px"></iframe>
+          width="594.5px"></iframe> -->
         <p> If you want a navigation menu for your side column that looks like
           the one on thesitewizard.com, you can generate your own and
           customize it, with the <a href="https://www.thesitewizard.com/wizards/css-menu-buttons.shtml">Navigation
@@ -80,7 +92,7 @@
       <div id="tswcssbuttons">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="aboutme.html">About Me </a></li>
+          <li><a href="aboutme1.html">About Me </a></li>
           <li><a href="mytown.html">My Town</a></li>
           <li><a href="sitemap.html"> Site Map</a></li>
         </ul>
@@ -96,6 +108,7 @@
     <!-- end of footer section: insert your copyright notice, etc, above this line -->
   </div>
   </div>
+  <script src="index.js"></script>
 </body>
 
 </html>
