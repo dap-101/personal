@@ -2,36 +2,59 @@
 //  1. Give every variable/const smallest scope
 //  2. Grab HTML elements by tag and store in const
 //  3. Put all other code inside functions
-const numField = document.getElementById("num-field");
+const colorField = document.getElementById("color-field");
 const messageText = document.getElementById("message-text");
 
 let secret;
-let min = 1;
-let max = 100;
+let min = 0;
+let max = 256;
+let secretString;
 
 var myConfetti = confetti.create(null, {
     resize: true,
     useWorker: true
 });
 
-function loadGame() {
-    numField.min = min;
-    numField.max = max;
-    numField.value = max;
-    secret = Math.random(); 
-    secret = secret * (max-min+1);
-    secret = secret + min;
-    secret = Math.floor(secret);
-}
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+   
+    }
+
+function loadGame(){
+        colorField.min = min;
+        colorField.max = max;
+        colorField.value = max;
+        red = Math.floor(Math.random()*max);
+        green = Math.floor(Math.random()*max);
+        blue = Math.floor(Math.random()*max);
+        
+    }
+
+// function loadGame() {
+   // numField.min = min;
+    //numField.max = max;
+    //numField.value = max;
+   // secret = Math.random(); 
+    //secret = secret * (max-min+1);
+   // secret = secret + min;
+   // secret = Math.floor(secret);
+//}
 
 function makeGuess() {
-    let guess = parseInt(numField.value)
+    //let guess = parseInt(colorField.value)
+    guess = colorField.value;
     console.log(`Guess: ${guess}`);
-    if(guess < secret){
-        messageText.innerHTML = `${guess} is too low`;
-    } else if (guess > secret) {
-        messageText.innerHTML = `${guess} is too high`;
-    } else if (guess == secret) {
+    guess = '0x'+ guess.slice(1);
+    guessnum = Number(guess);
+    
+    console.log(`Guessnum: ${guessnum}`);
+    if(guess == secret){
+
         messageText.innerHTML = `${guess} is correct!`
         myConfetti({
             particleCount: 900,
@@ -40,6 +63,6 @@ function makeGuess() {
         });
     
     } else {
-        messageText.innerHTML = `Don't cheat!`
+        messageText.innerHTML = `Incorrect`
     }
 }
