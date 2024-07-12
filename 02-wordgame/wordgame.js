@@ -23,6 +23,7 @@ function loadGame() {
         .catch(error => {
             console.error('Error fetching words: ', error);
         });
+        randomBackgroundColor();
 }
 
 function randomBackgroundColor() {
@@ -37,9 +38,12 @@ function randomBackgroundColor() {
 // For array of words: let arr = Object.keys(json)
 // For a random word:  let word = arr[randInt(0, arr.length - 1)];
 const randomWord = document.getElementById("random-word")
+const guessField = document.getElementById("guess-field")
+const feedbackText = document.getElementById("feedback-text")
 let allWords = [];
 let fiveLetterWords = [];
-function wordsLoaded(){
+let secret = '';
+function wordsLoaded() {
     allWords = Object.keys(json)
     let randomIndex = randInt(0, allWords.length-1)
     randomWord.innerHTML = allWords[randomIndex]
@@ -49,6 +53,37 @@ function wordsLoaded(){
         if (word.length != 5) continue;
         fiveLetterWords.push(word);
     }
+
     randomIndex = randInt(0, fiveLetterWords.length-1)
-    secret = fiveLetterWords[randomIndex];
+    secret = fiveLetterWords[randomIndex].toLowerCase();
+}
+
+function changeGuess(){
+    let guess = guessField.value.toLowerCase();
+
+    //SKIP if it's more than five letters    
+    if (guess.length < 5) return;
+
+    //SKIP and empty input if guess is more than five letters
+    if (guess.length > 5) {
+        guessField.value = "";
+        return;
+    }
+    console.log(`Guess: "${guess}" and Secret: "${secret}"`);
+
+    //SKIP and empty input if guess is NOT a word
+    if (!json.hasOwnProperty(guess)) {
+        feedbackText.innerHTML = `"${guess}" is not a word. Try again.<br>`;
+        guessField.value = "";
+        return;
+    }
+
+    let correctPlacement = 0;
+    for (let i = 0; i< 5; i++) {
+        if (guess[i] == secret[i]) {
+            correctPlacement ++;
+        }
+    }
+    feedbackText.innerHTML += `"${guess}" has"${correctPlacement}"  letter(s) in the correct place.<br>`;
+    guessField.value = "";
 }
