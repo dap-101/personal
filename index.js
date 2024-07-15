@@ -14,3 +14,13 @@ function buttonPress() {
     let fail = '${fontSizeField.value0}px' // Apostrophe will not work
 
 }
+
+function loadGame() {
+        randomBackgroundColor();
+}
+
+function randomBackgroundColor() {
+    let random = randInt(0, 359);
+    let colorString = `hsl(${random}, 100%, 90%)`;
+    body.style.backgroundColor = colorString;
+}
